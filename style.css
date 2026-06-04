@@ -1,0 +1,366 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    overflow-x:hidden;
+}
+
+header{
+    text-align:center;
+    padding:30px;
+    background:rgba(255,255,255,0.1);
+}
+
+header h1{
+    font-size:3rem;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h2{
+    margin-bottom:20px;
+    color:#facc15;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#facc15;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.galeria{
+    padding:50px;
+    text-align:center;
+}
+
+.imagenes{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:30px;
+}
+
+.imagenes img{
+    width:300px;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(255,255,255,0.3);
+    transition:0.4s;
+}
+
+.imagenes img:hover{
+    transform:scale(1.05);
+}
+
+.sugerencias{
+    padding:50px;
+    text-align:center;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+}
+
+textarea{
+    height:150px;
+}
+
+.contacto{
+    text-align:center;
+    padding:50px;
+    background:rgba(255,255,255,0.1);
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+/* ESTRELLAS */
+
+.estrella{
+    position:fixed;
+    top:-10px;
+    color:white;
+    animation:caer linear forwards;
+    pointer-events:none;
+}
+
+@keyframes caer{
+    from{
+        transform:translateY(-10px);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+}
+/* =========================
+   DISEÑO RESPONSIVO
+========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .galeria,
+    .sugerencias,
+    .contacto {
+        padding: 40px 20px;
+    }
+
+    .imagenes img {
+        width: 280px;
+        height: 200px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .galeria {
+        padding: 30px 15px;
+    }
+
+    .imagenes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagenes img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .sugerencias {
+        padding: 30px 15px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .contacto {
+        padding: 30px 15px;
+    }
+
+    .contacto p {
+        word-break: break-word;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .galeria h2,
+    .sugerencias h2,
+    .contacto h2 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        font-size: 0.95rem;
+    }
+
+    input,
+    textarea {
+        padding: 12px;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+
+    .hero p {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .imagenes {
+        gap: 30px;
+    }
+
+    .imagenes img {
+        width: 350px;
+        height: 250px;
+    }
+}/* =====================
+   QUIÉNES SOMOS
+===================== */
+
+.nosotros {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.nosotros h2 {
+    color: #facc15;
+    margin-bottom: 25px;
+}
+
+.nosotros p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* =====================
+   REDES SOCIALES
+===================== */
+
+.redes-sociales {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255,255,255,0.08);
+}
+
+.redes-sociales h2 {
+    margin-bottom: 30px;
+    color: #facc15;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.15);
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    background: #facc15;
+    color: #000;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links a {
+        width: 250px;
+    }
+
+    .nosotros p {
+        text-align: justify;
+    }
+}
